@@ -91,7 +91,6 @@
         <!--Main View Controller-->
         <scene sceneID="6qB-xi-Go1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="brx-w4-wGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="mainViewController" id="UzD-Zn-pOo" customClass="MainViewController" customModule="Sleep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vVX-QM-2GL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -152,6 +151,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="U1x-jB-HrY"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brx-w4-wGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="115.59220389805098"/>
         </scene>
@@ -311,6 +311,7 @@
         <image name="gear" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="soZ-Cx-Lxg"/>
         <segue reference="cUe-VS-9ct"/>
     </inferredMetricsTieBreakers>
 </document>

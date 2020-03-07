@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class DataInputViewController: UIViewController {
 
@@ -56,7 +57,7 @@ class DataInputViewController: UIViewController {
         self.viewWillAppear(true)
     }
     
-    @IBAction func submit(_ sender: Any) {
+    func createTimeToSubmit() -> StoreSleepRequest {
         let timeFormatterGet = DateFormatter()
         timeFormatterGet.dateFormat = "HH:mm:ss"
         
@@ -79,12 +80,30 @@ class DataInputViewController: UIViewController {
         print(startDate)
         print(endDate)
         
-        defaults.removeObject(forKey: "timeLabelSaved")
+        let request = StoreSleepRequest(date: formattedDate, start: startDate, end: endDate)
+        
+        return request
+    }
+    
+    @IBAction func submit(_ sender: Any) {
+        
+        let request = createTimeToSubmit()
+        let url = BackendUrl.url.rawValue + Endpoints.storeSleep.rawValue
+        
+        //MIGHT NEED TO CHANGE repsponseString DEPENDING ON THE RETURN
+        Alamofire.request(url, method: .post, parameters: request.dictionary, encoding: JSONEncoding.default).responseString {
+            (response) in
+            print(response)
+        }
+    
+        
+        //defaults.removeObject(forKey: "timeLabelSaved")
         self.viewWillAppear(true)
         
         
-        
     }
+    
+    
     /*
     // MARK: - Navigation
 
