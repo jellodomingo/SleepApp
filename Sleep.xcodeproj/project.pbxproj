@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		1728D50D240F8D8F00509D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D50C240F8D8F00509D66 /* AppDelegate.swift */; };
 		1728D50F240F8D8F00509D66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D50E240F8D8F00509D66 /* SceneDelegate.swift */; };
-		1728D511240F8D8F00509D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D510240F8D8F00509D66 /* ViewController.swift */; };
 		1728D514240F8D8F00509D66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1728D512240F8D8F00509D66 /* Main.storyboard */; };
 		1728D516240F8D9300509D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1728D515240F8D9300509D66 /* Assets.xcassets */; };
 		1728D519240F8D9300509D66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1728D517240F8D9300509D66 /* LaunchScreen.storyboard */; };
 		1728D524240F8D9400509D66 /* SleepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D523240F8D9400509D66 /* SleepTests.swift */; };
 		1728D52F240F8D9400509D66 /* SleepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D52E240F8D9400509D66 /* SleepUITests.swift */; };
+		1728D53F240F8EFA00509D66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D53E240F8EFA00509D66 /* LoginViewController.swift */; };
+		1728D5412412402A00509D66 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D5402412402A00509D66 /* MainViewController.swift */; };
+		1728D5432412405200509D66 /* DataInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D5422412405200509D66 /* DataInputViewController.swift */; };
+		1728D5452412444000509D66 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D5442412444000509D66 /* PersonalViewController.swift */; };
+		1728D54824139CB400509D66 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D54724139CB400509D66 /* Structs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 		1728D509240F8D8F00509D66 /* Sleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1728D50C240F8D8F00509D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1728D50E240F8D8F00509D66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1728D510240F8D8F00509D66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1728D513240F8D8F00509D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1728D515240F8D9300509D66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1728D518240F8D9300509D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		1728D52A240F8D9400509D66 /* SleepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1728D52E240F8D9400509D66 /* SleepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepUITests.swift; sourceTree = "<group>"; };
 		1728D530240F8D9400509D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1728D53E240F8EFA00509D66 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1728D5402412402A00509D66 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1728D5422412405200509D66 /* DataInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputViewController.swift; sourceTree = "<group>"; };
+		1728D5442412444000509D66 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		1728D54724139CB400509D66 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,9 @@
 		1728D50B240F8D8F00509D66 /* Sleep */ = {
 			isa = PBXGroup;
 			children = (
-				1728D50C240F8D8F00509D66 /* AppDelegate.swift */,
-				1728D50E240F8D8F00509D66 /* SceneDelegate.swift */,
-				1728D510240F8D8F00509D66 /* ViewController.swift */,
+				1728D546241341F500509D66 /* Structs */,
+				1728D53D240F8E7700509D66 /* Controllers */,
+				1728D53C240F8E5D00509D66 /* Delegates */,
 				1728D512240F8D8F00509D66 /* Main.storyboard */,
 				1728D515240F8D9300509D66 /* Assets.xcassets */,
 				1728D517240F8D9300509D66 /* LaunchScreen.storyboard */,
@@ -126,6 +134,34 @@
 				1728D530240F8D9400509D66 /* Info.plist */,
 			);
 			path = SleepUITests;
+			sourceTree = "<group>";
+		};
+		1728D53C240F8E5D00509D66 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				1728D50C240F8D8F00509D66 /* AppDelegate.swift */,
+				1728D50E240F8D8F00509D66 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		1728D53D240F8E7700509D66 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1728D53E240F8EFA00509D66 /* LoginViewController.swift */,
+				1728D5402412402A00509D66 /* MainViewController.swift */,
+				1728D5422412405200509D66 /* DataInputViewController.swift */,
+				1728D5442412444000509D66 /* PersonalViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1728D546241341F500509D66 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				1728D54724139CB400509D66 /* Structs.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1728D511240F8D8F00509D66 /* ViewController.swift in Sources */,
+				1728D53F240F8EFA00509D66 /* LoginViewController.swift in Sources */,
 				1728D50D240F8D8F00509D66 /* AppDelegate.swift in Sources */,
 				1728D50F240F8D8F00509D66 /* SceneDelegate.swift in Sources */,
+				1728D54824139CB400509D66 /* Structs.swift in Sources */,
+				1728D5432412405200509D66 /* DataInputViewController.swift in Sources */,
+				1728D5452412444000509D66 /* PersonalViewController.swift in Sources */,
+				1728D5412412402A00509D66 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
