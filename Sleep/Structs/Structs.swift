@@ -16,21 +16,23 @@ enum Endpoints : String{
     case storeSleep = "/storesleep"
     case getAvgHours = "/getavgsleep"
     case weather = "/weather"
+    case pastData = "/past"
+    case sleepSuggestion = "/getsleepsuggestion"
+    case foodSuggestion = "/eat"
 }
 
 struct Location : Encodable {
-    var lat: Double
-    var lng: Double
+    var lat: String
+    var lon: String
+}
+
+struct SleepSuggestionRequest : Encodable{
+    var age: String
 }
 
 struct StoreSleepRequest : Encodable{
-    var date: String
     var start: String
     var end: String
-}
-
-struct GetAvgSleepResponse : Decodable {
-    var age: String
 }
 
 struct WeatherRequest : Encodable {

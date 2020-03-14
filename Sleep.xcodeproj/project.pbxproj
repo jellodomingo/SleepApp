@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		1728D5432412405200509D66 /* DataInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D5422412405200509D66 /* DataInputViewController.swift */; };
 		1728D5452412444000509D66 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D5442412444000509D66 /* PersonalViewController.swift */; };
 		1728D54824139CB400509D66 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D54724139CB400509D66 /* Structs.swift */; };
+		17536FEC2416FB8B004FDBD5 /* SleepDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17536FEB2416FB8B004FDBD5 /* SleepDataViewController.swift */; };
+		17536FEF241706A5004FDBD5 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17536FEE241706A5004FDBD5 /* DataTableViewCell.swift */; };
 		3D23CA382EB75684E9191C0A /* Pods_Sleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864BB65679B840BB8491FF65 /* Pods_Sleep.framework */; };
 		902395E394D49D360EF4EE76 /* Pods_SleepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BADA7CBDEC8B584CAFCE0DA /* Pods_SleepTests.framework */; };
 		ACBAC8467EC0173CA55347CB /* Pods_Sleep_SleepUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D644B45BB9002F2BD5EC175 /* Pods_Sleep_SleepUITests.framework */; };
@@ -60,6 +62,8 @@
 		1728D5422412405200509D66 /* DataInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputViewController.swift; sourceTree = "<group>"; };
 		1728D5442412444000509D66 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		1728D54724139CB400509D66 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		17536FEB2416FB8B004FDBD5 /* SleepDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepDataViewController.swift; sourceTree = "<group>"; };
+		17536FEE241706A5004FDBD5 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		4C5DFEC06A0310D39B2D0BFE /* Pods-Sleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep.release.xcconfig"; path = "Target Support Files/Pods-Sleep/Pods-Sleep.release.xcconfig"; sourceTree = "<group>"; };
 		5BADA7CBDEC8B584CAFCE0DA /* Pods_SleepTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D644B45BB9002F2BD5EC175 /* Pods_Sleep_SleepUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleep_SleepUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +128,7 @@
 		1728D50B240F8D8F00509D66 /* Sleep */ = {
 			isa = PBXGroup;
 			children = (
+				17536FED24170677004FDBD5 /* Cells */,
 				1728D546241341F500509D66 /* Structs */,
 				1728D53D240F8E7700509D66 /* Controllers */,
 				1728D53C240F8E5D00509D66 /* Delegates */,
@@ -169,6 +174,7 @@
 				1728D5402412402A00509D66 /* MainViewController.swift */,
 				1728D5422412405200509D66 /* DataInputViewController.swift */,
 				1728D5442412444000509D66 /* PersonalViewController.swift */,
+				17536FEB2416FB8B004FDBD5 /* SleepDataViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +185,14 @@
 				1728D54724139CB400509D66 /* Structs.swift */,
 			);
 			path = Structs;
+			sourceTree = "<group>";
+		};
+		17536FED24170677004FDBD5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				17536FEE241706A5004FDBD5 /* DataTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		76F310B73BD16B39F44DC41A /* Frameworks */ = {
@@ -201,7 +215,6 @@
 				D59CC46BF28B32B4FD2CDB0C /* Pods-SleepTests.debug.xcconfig */,
 				A4CFF68B5F355EA4ACB1F8CF /* Pods-SleepTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -446,7 +459,9 @@
 			files = (
 				1728D53F240F8EFA00509D66 /* LoginViewController.swift in Sources */,
 				1728D50D240F8D8F00509D66 /* AppDelegate.swift in Sources */,
+				17536FEC2416FB8B004FDBD5 /* SleepDataViewController.swift in Sources */,
 				1728D50F240F8D8F00509D66 /* SceneDelegate.swift in Sources */,
+				17536FEF241706A5004FDBD5 /* DataTableViewCell.swift in Sources */,
 				1728D54824139CB400509D66 /* Structs.swift in Sources */,
 				1728D5432412405200509D66 /* DataInputViewController.swift in Sources */,
 				1728D5452412444000509D66 /* PersonalViewController.swift in Sources */,

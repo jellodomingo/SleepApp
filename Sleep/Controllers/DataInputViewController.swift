@@ -38,10 +38,10 @@ class DataInputViewController: UIViewController {
     
     @IBAction func saveStart(_ sender: Any) {
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "HH:mm:ss"
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let timeFormat = DateFormatter()
-        timeFormat.dateFormat = "hh:mm a"
+        timeFormat.dateFormat = "yyyy-MM-dd hh:mm a"
         timeFormat.amSymbol = "AM"
         timeFormat.pmSymbol = "PM"
 
@@ -57,14 +57,10 @@ class DataInputViewController: UIViewController {
         self.viewWillAppear(true)
     }
     
+    //CHANGE TO INCLUDE TWO DATES
     func createTimeToSubmit() -> StoreSleepRequest {
         let timeFormatterGet = DateFormatter()
-        timeFormatterGet.dateFormat = "HH:mm:ss"
-        
-        let today = Date()
-        let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "yyyy-MM-dd"
-        let formattedDate = dateFormat.string(from: today)
+        timeFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let defaults = UserDefaults.standard
         var startDate: String
@@ -76,11 +72,10 @@ class DataInputViewController: UIViewController {
     
         let endDate = timeFormatterGet.string(from: endTime.date)
         
-        print(formattedDate)
         print(startDate)
         print(endDate)
         
-        let request = StoreSleepRequest(date: formattedDate, start: startDate, end: endDate)
+        let request = StoreSleepRequest(start: startDate, end: endDate)
         
         return request
     }
@@ -91,11 +86,11 @@ class DataInputViewController: UIViewController {
         let url = BackendUrl.url.rawValue + Endpoints.storeSleep.rawValue
         
         //MIGHT NEED TO CHANGE repsponseString DEPENDING ON THE RETURN
+        
         Alamofire.request(url, method: .post, parameters: request.dictionary, encoding: JSONEncoding.default).responseString {
             (response) in
             print(response)
         }
-    
         
         //defaults.removeObject(forKey: "timeLabelSaved")
         self.viewWillAppear(true)
